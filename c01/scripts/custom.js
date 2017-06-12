@@ -2,7 +2,10 @@ $(function(){
 		// <p>がマウスオーバーされたらアウトラインを付ける
 		$('p').on('mouseenter', function(){
 				$(this).css('outline', '1px solid gold');
-		});
+		})
+		.on('mouseleave', function(){
+				$(this).css('outline', 'none');
+			});
 		/*
 		$('ul').css('background-color', 'yellowgreen');
 		$('#ordered').css('background-color', 'wheat');
