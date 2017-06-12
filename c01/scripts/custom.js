@@ -1,6 +1,6 @@
 $(function(){
-		// <p>がクリックされたらアウトラインを付ける
-		$('p').on('click', function(){
+		// <p>がマウスオーバーされたらアウトラインを付ける
+		$('p').on('mouseenter', function(){
 				$(this).css('outline', '1px solid gold');
 		});
 		/*
