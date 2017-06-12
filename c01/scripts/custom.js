@@ -4,4 +4,5 @@ $(function(){
 		});
 		$('ul').css('background-color', 'yellowgreen');
 		$('#ordered').css('background-color', 'wheat');
+		$('.external').css('text-decoration', 'none');
 });
