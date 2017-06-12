@@ -8,4 +8,5 @@ $(function(){
 		$('form p').css('border-bottom', '1px solid #ddd');
 		$('tr:nth-child(even)').css('background-color', 'lightblue');
 		$('input[type=text]').css('background-color', 'orange');
+		$('h1, h2').css('color', 'steelblue');
 });
