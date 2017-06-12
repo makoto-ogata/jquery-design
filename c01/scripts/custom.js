@@ -1,5 +1,5 @@
 $(function(){
 		$('p').on('click', function(){
-				$('p').css('outline', '1px solid gold');
+				$(this).css('outline', '1px solid gold');
 		});
 });
