@@ -26,7 +26,7 @@ $(function(){
 				var $parent = $(this).parent();
 				$parent.siblings().css('color', 'black');
 				$parent.css('color', 'gold');
-			});
+		});
 		/*
 		 $('ul').css('background-color', 'yellowgreen');
 		 $('#ordered').css('background-color', 'wheat');
