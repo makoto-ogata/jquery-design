@@ -12,6 +12,9 @@ $(function(){
 		.on('blur', function(){
 				$(this).css('background-color', 'transparent');
 		});
+		$('table').find('td').on('click', function(){
+				$(this).css('background-color', 'lightblue');
+			});
 		/*
 		 $('ul').css('background-color', 'yellowgreen');
 		 $('#ordered').css('background-color', 'wheat');
