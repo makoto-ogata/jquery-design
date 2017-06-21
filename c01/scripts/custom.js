@@ -13,6 +13,7 @@ $(function(){
 				$(this).css('background-color', 'transparent');
 		});
 		$('table').find('td').on('click', function(){
+				$(this).closest('table').find('td').css('background-color', 'transparent');
 				$(this).css('background-color', 'lightblue');
 			});
 		/*
