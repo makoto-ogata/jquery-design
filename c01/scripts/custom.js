@@ -17,6 +17,11 @@ $(function(){
 				$this.closest('table').find('td').css('background-color', 'transparent');
 				$this.css('background-color', 'lightblue');
 			});
+		$('input[type=checkbox]').on('change', function(){
+				var $this = $(this);
+				$this.parent().css('color', 'black');
+				$this.filter(':checked').parent().css('color', 'gold');
+			});
 		/*
 		 $('ul').css('background-color', 'yellowgreen');
 		 $('#ordered').css('background-color', 'wheat');
