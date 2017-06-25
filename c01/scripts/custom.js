@@ -28,7 +28,13 @@ $(function(){
 				$parent.css('color', 'gold');
 		});
 		$('#unordered').find('li').on('click', function(){
-				$(this).text('このリストをクリックしました。');
+				var $this = $(this);
+				var count = $this.data('count') + 1;
+				var newString = 'このリストを' + count + '回クリックしました。';
+				$this
+				.data('count', count)
+				.text(newString);
+				// $(this).text('このリストをクリックしました。');
 			});
 		/*
 		 $('ul').css('background-color', 'yellowgreen');
