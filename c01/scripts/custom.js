@@ -27,6 +27,9 @@ $(function(){
 				$parent.siblings().css('color', 'black');
 				$parent.css('color', 'gold');
 		});
+		$('#unordered').find('li').on('click', function(){
+				$(this).text('このリストをクリックしました。');
+			});
 		/*
 		 $('ul').css('background-color', 'yellowgreen');
 		 $('#ordered').css('background-color', 'wheat');
