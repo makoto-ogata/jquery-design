@@ -35,7 +35,11 @@ $(function(){
 				.data('count', count)
 				.text(newString);
 				// $(this).text('このリストをクリックしました。');
-			});
+		});
+		$('#ordered').find('li').on('click', function(){
+				var $element = $('<li>追加された序列リスト項目</li>');
+				$(this).after($element);
+		});
 		/*
 		 $('ul').css('background-color', 'yellowgreen');
 		 $('#ordered').css('background-color', 'wheat');
