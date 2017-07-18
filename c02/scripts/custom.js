@@ -12,10 +12,17 @@ $(function(){
 				} else {
 					$nav.css('display', 'block');
 				}
-			});
+		});
 
 		$('.menubtn > a').on('click', function(){
 				$('.nav-global').slideToggle(400);
-			});
+		});
+
+		$('.tab-menu li > a').on('click', function(){
+				var $this = $(this);
+
+				//ボタンのアピアランスを変更する
+				$this.parent().siblings().removeClass('selected').end().addClass('selected');
+		});
 });
 
