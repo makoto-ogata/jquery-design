@@ -1,3 +1,38 @@
 .wrapper-headerinfo {
 	display: none;
 }
+
+.menubtn {
+	display: none;
+}
+
+/**
+ * RESPONSIVE スマートフォン向けウィンドウ600ピクセル以下
+ */
+
+@media screen and (max-width: 600px){
+	.menubtn {
+		display: block;
+	}
+
+	.menubtn a {
+		display: block;
+		padding: 10px 0;
+		background: #ededed;
+		color: #8ac2d0;
+		font-weight: bold;
+		text-align: center;
+	}
+
+	.menubtn a:hover {
+		background: #ddd;
+	}
+
+	.menubtn a:active {
+		background: #ddd;
+	}
+
+	.nav-global {
+		display: none;
+	}
+}
