@@ -18,7 +18,8 @@ $(function(){
 				$('.nav-global').slideToggle(400);
 		});
 
-		$('.tab-menu li > a').on('click', function(){
+		$('.tab-menu li > a').on('click', function(event){
+				event.preventDefault();
 				var $this = $(this);
 
 				//ボタンのアピアランスを変更する
