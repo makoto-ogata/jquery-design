@@ -18,7 +18,7 @@ $(function(){
 				$('.nav-global').slideToggle(400);
 		});
 
-		$('.tab-menu li > a').on('click', function(event){
+		$('.tab-menu').on('click', 'li > a',  function(event){
 				event.preventDefault();
 				var $this = $(this);
 
