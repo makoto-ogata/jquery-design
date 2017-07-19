@@ -24,6 +24,17 @@ $(function(){
 
 				//ボタンのアピアランスを変更する
 				$this.parent().siblings().removeClass('selected').end().addClass('selected');
+
+				//コンテンツを切り替える
+				var tabId = $this.data('tabid');
+				$this.closest('.tab').find('.tab-contents').children().each(function (){
+						var $content = $(this);
+						if($content.data('contentid') == tabId){
+							$content.removeClass('hidden');
+						} else {
+							$content.addClass('hidden');
+						}
+					});
 		});
 });
 

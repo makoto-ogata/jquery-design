@@ -36,6 +36,15 @@
 	color: #fff;
 }
 
+.tab-contents {
+	padding: 20px 2.2727272%;
+	background: #ededed;
+}
+
+.tab-contents .hidden {
+	display: none;
+}
+
 /**
  * RESPONSIVE スマートフォン向けウィンドウ600ピクセル以下
  */
