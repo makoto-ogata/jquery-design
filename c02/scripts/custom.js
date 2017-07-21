@@ -46,6 +46,10 @@ $(function(){
 				.removeClass('selected')
 				.end()
 				.addClass('selected');
+
+				//イメージを差し替え
+				var imagePath = $this.data('img');
+				$('.gallery .mainimage img').attr('src', imagePath);
 			});
 });
 
