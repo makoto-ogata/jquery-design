@@ -36,5 +36,16 @@ $(function(){
 						}
 					});
 		});
+
+		$('.thumbnails').on('click', 'li > a', function(){
+				event.preventDefault();
+				var $this = $(this);
+
+				//ボタンのアピアランスを変更する
+				$this.parent().siblings()
+				.removeClass('selected')
+				.end()
+				.addClass('selected');
+			});
 });
 
