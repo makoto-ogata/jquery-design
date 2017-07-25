@@ -6,6 +6,11 @@ $(function(){
 				$this
 				.toggleClass('expanded')
 				.children('.content')
-				.slideToggle('fast');
+				.slideToggle('fast')
+				.end()
+				.siblings()
+				.removeClass('expanded')
+				.children('.content')
+				.slideUp('fast');
 		});
 	});
