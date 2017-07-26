@@ -41,6 +41,8 @@
 }
 .menubar {
 	position: absolute;
+	right: 4.1666666%;
+	bottom: 0;
 }
 .dropdown-menu {
 	width: 150px;
@@ -55,7 +57,20 @@
 	background-repeat: no-repeat;
 	color: #fff;
 	font-size: 0.9em;
+	border-radius: 5px;
 }
+
+.dropdown-menu > a:hover {
+	background-image: url('../images/arrow-dropdown2.png');
+	color: #ddd;
+}
+
+.dropdown-menu > a:active {
+	background-image: url('../images/arrow-dropdown3.png');
+	color: #a2a2a2;
+}
+
+
 /* クリックして開くメニューのスタイル */
 .dropdown-menu > .items {
 	display: none;
@@ -70,4 +85,36 @@
 	color: #fff;
 	font-size: 0.9em;
 	text-align: center;
+}
+
+.dropdown-menu > .items li:first-child a {
+	border-radius: 5px 5px 0 0;
+}
+.dropdown-menu > .items li:last-child a {
+	border-radius: 0 0 5px 5px;
+}
+.dropdown-menu > .items li a:hover {
+	background: #bbb;
+}
+.dropdown-menu > .items li a:active {
+	background: #757575;
+}
+
+/**
+ * RESPONSIVE: スマートフォン向けウィンドウ幅600px以下
+ */
+@media screen and (max-width:600px) {
+	.wrapper-menubar {
+		height: 30px;
+	}
+	.menubar {
+		top: 0;
+	}
+	.dropdown-menu > a {
+		border-radius: 0 0 5px 5px;
+		font-size: 0.8em;
+	}
+	.dropdown-menu > .items li a {
+		font-size: 0.8em;
+	}
 }

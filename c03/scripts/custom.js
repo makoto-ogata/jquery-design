@@ -19,6 +19,12 @@ $(function(){
 				event.preventDefault();
 				event.stopPropagation();
 				var $this = $(this);
+
+				//複数のドロップダウンメニューがある時の対策
+				$this.parent().siblings('li').children('a')
+				.removeClass('open')
+				.next().hide();
+
 				if($this.hasClass('open')) {
 					$this.removeClass('open')
 					.next().hide();
