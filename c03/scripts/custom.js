@@ -15,14 +15,22 @@ $(function(){
 		});
 
 		$('.dropdown-menu').children('a')
-		.on('click', function(){
+		.on('click', function(event){
+				event.preventDefault();
+				event.stopPropagation();
 				var $this = $(this);
 				if($this.hasClass('open')) {
 					$this.removeClass('open')
 					.next().hide();
+					$('html').off('click', closeItems);
 				} else {
 					$this.addClass('open')
 					.next().show();
+					$('html').on('click', closeItems);
 				}
-			});
+				function closeItems() {
+					$this.removeClass('open')
+					.next().hide();
+				}
+		});
 });
