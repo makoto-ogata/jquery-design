@@ -44,18 +44,12 @@ $(function(){
 		.on('mouseenter', '.btn-action', function(event){
 				event.preventDefault();
 				$(this).find('img')
-				.css({
-						'transtion':'box-shadow 0.6s ease-in-out',
-						'box-shadow':'0 0 12px 12px rgba(117, 180, 196, 0.5)'
-				});
+				.addClass('animate');
 		})
 		.on('mouseleave', '.btn-action', function(event){
 				event.preventDefault();
 				$(this).find('img')
-				.css({
-						'transtion':'box-shadow 0.6s ease-in-out',
-						'box-shadow':'none'
-				});
-			});
+				.removeClass('animate');
+		});
 
 });

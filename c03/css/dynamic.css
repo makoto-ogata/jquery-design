@@ -100,6 +100,19 @@
 	background: #757575;
 }
 
+.shortcut li img {
+	border-radius: 50%;
+}
+
+.first .btn-action img {
+	transition: box-shadow .6s ease-in-out;
+	box-shadow: none;
+}
+
+.first .btn-action img.animate {
+	box-shadow: 0 0 12px 12px rgba(117, 180, 196, .5);
+}
+
 /**
  * RESPONSIVE: スマートフォン向けウィンドウ幅600px以下
  */
