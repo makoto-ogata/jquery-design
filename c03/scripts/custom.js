@@ -63,6 +63,21 @@ $(function(){
 				event.preventDefault();
 				$(this).find('img')
 				.animate({'opacity':1}, 300);
-			});
+		});
+
+		var value = 0.5;
+		$('.third')
+		.on('mouseenter mouseleave', '.btn-action', function(event){
+				event.preventDefault();
+				var opacityValue;
+				if(event.type == 'mouseenter'){
+					opacityValue = value;
+				} else {
+					opacityValue = 1;
+				}
+
+				$(this).find('img')
+				.animate({opacity: opacityValue}, 500);
+		});
 
 });
