@@ -52,4 +52,16 @@ $(function(){
 				.removeClass('animate');
 		});
 
+		$('.second')
+		.on('mouseenter', '.btn-action', function(event){
+				event.preventDefault();
+				$(this).find('img')
+				.animate({'opacity':0.5}, 300);
+		})
+		.on('mouseleave', '.btn-action', function(event){
+				event.preventDefault();
+				$(this).find('img')
+				.animate({'opacity':1}, 300);
+			});
+
 });
