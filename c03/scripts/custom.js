@@ -56,7 +56,8 @@ $(function(){
 		.on('mouseenter', '.btn-action', function(event){
 				event.preventDefault();
 				$(this).find('img')
-				.animate({'opacity':0.5}, 300);
+				.animate({'opacity':0.5}, 300)
+				.animate({'opacity':1}, 500);
 		})
 		.on('mouseleave', '.btn-action', function(event){
 				event.preventDefault();
