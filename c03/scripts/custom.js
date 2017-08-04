@@ -80,4 +80,14 @@ $(function(){
 				.animate({opacity: opacityValue}, 500);
 		});
 
+		function changeImage($click){
+			console.log($click);
+		}
+
+		$('.slide')
+		.on('click', '> a', function(event){
+				event.preventDefault();
+				changeImage($(this));
+			});
+
 });
