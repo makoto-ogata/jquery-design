@@ -140,10 +140,35 @@
 	position: relative;
 	margin: 0 auto;
 	max-width: 960px;
+	font-size: 0;
 }
 .slide img {
 	max-width: 100%;
 }
+/* 写真の配置 */
+.slide > .container {
+	position: relative;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.slide > .container > li {
+	position: absolute;
+	z-index: 0;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	transition: opacity ls linear;
+}
+
+.slide > .container > li.current {
+	position: relative;
+	z-index: 1;
+	opacity: 1;
+}
+
 /* スライドショーのボタン */
 .slide a.prev,
 .slide a.next {
