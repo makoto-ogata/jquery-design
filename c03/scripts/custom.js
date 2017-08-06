@@ -80,6 +80,17 @@ $(function(){
 				.animate({opacity: opacityValue}, 500);
 		});
 
+		var intervalId;
+		setTimer();
+
+		function setTimer(){
+			intervalId = setInterval(autoClick, 5000);
+		}
+
+		function autoClick(){
+			$('.slide').children('a.next').click();
+		}
+
 		function changeImage($click){
 			// console.log($click);
 			var $current = $click.siblings('.container').children('.current');
@@ -99,11 +110,14 @@ $(function(){
 			}
 			$current.removeClass('current');
 			$new.addClass('current');
+			setTimer();
 		}
 
 		$('.slide')
 		.on('click', '> a', function(event){
 				event.preventDefault();
+				event.stopPropagation();
+				clearInterval(intervalId);
 				changeImage($(this));
 		});
 
