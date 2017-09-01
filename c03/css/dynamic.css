@@ -210,3 +210,31 @@
 		top: 40%;
 	}
 }
+
+/* moreボタン */
+.btn {
+	text-align: right;
+}
+a.btn-details {
+	display: inline-block;
+	padding: 5px 30px 5px 45px;
+	border-radius: 5px;
+	background-color: #8ac2d0;
+	background-image: url(../images/arrow-next.png);
+	background-position: 30px 50%;
+	background-repeat: no-repeat;
+	color: #fff;
+}
+a:hover.btn-details {
+	background-color: #b9d5dc;
+}
+a:active.btn-details {
+	background-color: #75b4c4;
+}
+a.disabled.btn-details,
+a:hover.disabled.btn-details,
+a:active.disabled.btn-details
+{
+	cursor: default;
+	background-color: #b9d5dc;
+}
