@@ -126,7 +126,15 @@ $(function(){
 				$this = $(this);
 				var ajaxUrl = $this.attr('href');
 				$.get(ajaxUrl, function(data) {
-						console.log(data);
+						// console.log(data);
+						var $insertImg = $('<img>').attr('src', data.img);
+						var $insertText = $('<p></p>').text(data.article);
+						var $list = $('<li></li>')
+						.prepend($insertImg)
+						.append($insertText)
+						.css({"opacity": 0});
+						$('#ajax-list').append($list);
+						$list.animate({'opacity':1}, 400);
 					});
 		});
 
