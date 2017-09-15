@@ -31,7 +31,16 @@
 	margin: 0 0 1em 0;
 	line-height: 1.8em;
 }
-
+/* シェード */
+#shade {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #999;
+	opacity: .9;
+}
 /**
  * RESPONSIVE: スマートフォン向けウィンドウ幅600px以下
  */
