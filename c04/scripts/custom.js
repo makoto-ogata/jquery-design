@@ -33,4 +33,9 @@ $(function() {
 		};
 
 		$('.show-modal').on('click', showModal);
+
+		$(window).on('scroll', function(){
+				var scrollValue = $(this).scrollTop();
+				console.log(scrollValue);
+		});
 });
