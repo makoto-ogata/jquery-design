@@ -59,6 +59,13 @@ a.modal-close:active {
 	background-color: #999;
 	opacity: .9;
 }
+
+.fixed {
+	position: fixed;
+}
+.wrapper-nav-global.fixed {
+	width: 100%;
+}
 /**
  * RESPONSIVE: スマートフォン向けウィンドウ幅600px以下
  */
