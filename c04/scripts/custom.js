@@ -33,7 +33,9 @@ $(function() {
 		};
 
 		$('.show-modal').on('click', showModal);
+});
 
+$(function() {
 		$(window).on('scroll', function(){
 				var scrollValue = $(this).scrollTop();
 				// console.log(scrollValue);
@@ -51,13 +53,27 @@ $(function() {
 				var $this = $(this);
 
 				if($this.data('initial') <= object.posY) {
-					if(!$this.hasClass('hixed')) {
+					if(!$this.hasClass('fixed')) {
+						var $substitute = $('<div></div>');
+
+						$substitute
+						.css({
+								'margin': '0',
+								'padding': '0',
+								'font-size': '0',
+								'height': '0'
+						})
+						.addClass('substitute')
+						.height($this.outerHeight(true))
+						.width($this.outerWidth(true));
 						$this
+						.after($substitute)
 						.addClass('fixed')
 						.css({top: 0});
 					}
 				} else {
 					// 要素の固定を解除
+					$this.next('.substitute').remove();
 					$this.removeClass('fixed');
 				}
 		});
