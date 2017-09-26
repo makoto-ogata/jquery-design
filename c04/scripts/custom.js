@@ -51,8 +51,12 @@ $(function() {
 		.on('customScroll', function(event, object){
 				// console.log('customScroll %s', object.posY);
 				var $this = $(this);
+				var offsetTop = 0;
+				if($this.data('offsettop')) {
+					offsetTop = $this.data('offsettop');
+				}
 
-				if($this.data('initial') <= object.posY) {
+				if($this.data('initial') - offsetTop <= object.posY) {
 					if(!$this.hasClass('fixed')) {
 						var $substitute = $('<div></div>');
 
@@ -69,7 +73,7 @@ $(function() {
 						$this
 						.after($substitute)
 						.addClass('fixed')
-						.css({top: 0});
+						.css({top: offsetTop});
 					}
 				} else {
 					// 要素の固定を解除
