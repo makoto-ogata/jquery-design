@@ -36,6 +36,15 @@ $(function() {
 });
 
 $(function() {
+
+		function mediaDetect(query) {
+			if(window.matchMedia){
+				return window.matchMedia(query).matches;
+			} else {
+				return false;
+			}
+		}
+
 		$(window).on('scroll', function(){
 				var scrollValue = $(this).scrollTop();
 				// console.log(scrollValue);
@@ -51,34 +60,39 @@ $(function() {
 		.on('customScroll', function(event, object){
 				// console.log('customScroll %s', object.posY);
 				var $this = $(this);
-				var offsetTop = 0;
-				if($this.data('offsettop')) {
-					offsetTop = $this.data('offsettop');
-				}
 
-				if($this.data('initial') - offsetTop <= object.posY) {
-					if(!$this.hasClass('fixed')) {
-						var $substitute = $('<div></div>');
-
-						$substitute
-						.css({
-								'margin': '0',
-								'padding': '0',
-								'font-size': '0',
-								'height': '0'
-						})
-						.addClass('substitute')
-						.height($this.outerHeight(true))
-						.width($this.outerWidth(true));
-						$this
-						.after($substitute)
-						.addClass('fixed')
-						.css({top: offsetTop});
-					}
+				if($this.hasClass('noresponsive') && mediaDetect('(max-width: 600px)')) {
+					// 何もしない
 				} else {
-					// 要素の固定を解除
-					$this.next('.substitute').remove();
-					$this.removeClass('fixed');
+					var offsetTop = 0;
+					if($this.data('offsettop')) {
+						offsetTop = $this.data('offsettop');
+					}
+
+					if($this.data('initial') - offsetTop <= object.posY) {
+						if(!$this.hasClass('fixed')) {
+							var $substitute = $('<div></div>');
+
+							$substitute
+							.css({
+									'margin': '0',
+									'padding': '0',
+									'font-size': '0',
+									'height': '0'
+							})
+							.addClass('substitute')
+							.height($this.outerHeight(true))
+							.width($this.outerWidth(true));
+							$this
+							.after($substitute)
+							.addClass('fixed')
+							.css({top: offsetTop});
+						}
+					} else {
+						// 要素の固定を解除
+						$this.next('.substitute').remove();
+						$this.removeClass('fixed');
+					}
 				}
 		});
 });
