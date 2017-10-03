@@ -96,3 +96,16 @@ $(function() {
 				}
 		});
 });
+
+$(function() {
+		$('a.scroll-link').on('click', function(event){
+				event.preventDefault();
+
+				var $this = $(this);
+				var linkTo = $this.attr('href');
+				var $target = $(linkTo);
+				var pos = $target.offset().top;
+				$('html, body').animate({scrollTop: pos}, 400);
+		});
+});
+
