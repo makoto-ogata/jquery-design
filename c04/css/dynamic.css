@@ -104,3 +104,8 @@ a.modal-close:active {
 .pageup a:acrive {
 	background-image: url("../images/arrow-3.png");
 }
+
+.sidebar ul li a.selected {
+	background: url(../images/sidebar-bg4.png) no-repeat 95% 50% #e38d8d;
+	color: #fff;
+}

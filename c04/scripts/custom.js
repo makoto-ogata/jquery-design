@@ -113,5 +113,23 @@ $(function() {
 				}
 				$('html, body').animate({scrollTop: pos}, 400);
 		});
+
+		$(window).on('scroll', function(){
+				$('a.scroll-track').each(function(){
+						var $window = $(window);
+						var $this = $(this);
+						var linkTo = $this.attr('href');
+						var $target = $(linkTo);
+						var offset = $target.data('offsettop') || 0;
+						var topLimit = $target.offset().top - offset;
+						var bottomLimit = $target.offset().top + $target.outerHeight() - offset;
+
+						if(topLimit <= $window.scrollTop() && $window.scrollTop() <= bottomLimit){
+							$this.addClass('selected');
+						}else{
+							$this.removeClass('selected');
+						}
+				});
+		});
 });
 
