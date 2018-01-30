@@ -31,6 +31,24 @@
 	margin: 0 0 1em 0;
 	line-height: 1.8em;
 }
+/* 閉じるボタン */
+a.modal-close {
+	display: block;
+	background-image: url('../images/close.png');
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+a.modal-close:hover {
+	background-position: -40px 0;
+}
+a.modal-close:active {
+	background-position: -80px 0;
+}
 /* シェード */
 #shade {
 	position: fixed;
@@ -41,6 +59,13 @@
 	background-color: #999;
 	opacity: .9;
 }
+
+.fixed {
+	position: fixed;
+}
+.wrapper-nav-global.fixed {
+	width: 100%;
+}
 /**
  * RESPONSIVE: スマートフォン向けウィンドウ幅600px以下
  */
@@ -48,4 +73,39 @@
 	.modalwin {
 		width: 90%;
 	}	
+}
+
+.pageup {
+	margin: 0 auto;
+	max-width: 960px;
+	height: 30px;
+	background: #fff;
+	position: relative;
+}
+
+.pageup a {
+	display: block;
+	width: 60px;
+	height: 30px;
+	border-radius: 30px 30px 0 0;
+	background-color: #000;
+	background-image: url("../images/arrow-1.png");
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	position: absolute;
+	right: 4.1666666%;
+	bottom: 0;
+}
+
+.pageup a:hover {
+	background-image: url("../images/arrow-2.png");
+}
+
+.pageup a:acrive {
+	background-image: url("../images/arrow-3.png");
+}
+
+.sidebar ul li a.selected {
+	background: url(../images/sidebar-bg4.png) no-repeat 95% 50% #e38d8d;
+	color: #fff;
 }
