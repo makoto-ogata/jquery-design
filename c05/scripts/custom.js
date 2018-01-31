@@ -1,9 +1,9 @@
 $(function(){
 		// データをロードする
 		var shopdata;
-		$.get('dummy.json', function(data){
+		$.get('shopdata.json', function(data){
 				shopdata = data;
-				console.log(shopdata);
+				// console.log(shopdata);
 		})
 		.fail(function(){
 				alert('店舗データをダウンロードできませんでした。しばらく経ってからまたお試しください。');
